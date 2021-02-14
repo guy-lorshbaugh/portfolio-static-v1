@@ -10,6 +10,15 @@ body {
     padding: 0;
     margin: 0;
 }
+h2 {
+    font-size: 2rem;
+}
+a {
+    text-shadow: none;
+}
+a:hover {
+    color: rgb(168, 109, 0);
+}
 .serif {
     font-family: Newsreader, serif;
 
@@ -21,13 +30,12 @@ body {
 .sans-serif {
     text-shadow: 0px 0px 2px gray;
 }
-h2 {
-    font-size: 2rem;
-}
     /* Parallax Backgrounds */
 .parallax-1,
 .parallax-2,
-.parallax-3 {  
+.parallax-3,
+.parallax-4,
+.parallax-5 {  
     /* Formatting for all parallax BGs */
     background-attachment: fixed;
     background-position: center;
@@ -45,6 +53,14 @@ h2 {
 }
 .parallax-3 {
     background-image: url(../img/tools.jpg);
+}
+.parallax-4 {
+    background-image: url(../img/guy-bench.jpg);
+    background-position-y: 80%;
+}
+.parallax-5 {
+    background-image: url(../img/portland.jpg);
+    /* background-position-y: 80%; */
 }
 
 /*  --- BANNER --- */
@@ -188,17 +204,25 @@ h2 {
     justify-content: center;
     width: 100%;
     height: 250px;
+    padding-top: 0px;
     color: white;
     background-color: rgba(32, 130, 211, 0.5);
     box-shadow: 0 4px 2px -2px gray;
     border-top: 5px solid rgb(32, 130, 211);
     border-bottom: 5px solid rgb(32, 130, 211);
 }
+.blurb h2 {
+    margin-top: 0;
+}
 .blurb h2,
 .blurb p {
     max-width: 65%;
     text-align: center;
+    margin-bottom: 0px;
 }
-.professional h2 {
+.blurb h2 {
     letter-spacing: 0.4rem;
+}
+.last-blurb {
+    border-bottom: none;
 }
