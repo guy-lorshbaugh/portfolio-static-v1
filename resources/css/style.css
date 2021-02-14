@@ -226,3 +226,13 @@ a:hover {
 .last-blurb {
     border-bottom: none;
 }
+
+@media only screen and (max-width: 768px) {
+    .blurb {
+        width: 100%;
+        height: 375px;
+    }
+    .blurb h2 {
+        letter-spacing: normal;
+    }
+}
