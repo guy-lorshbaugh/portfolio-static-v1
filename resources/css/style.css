@@ -56,6 +56,10 @@ a:hover {
 .sans-serif {
     text-shadow: 0px 0px 2px gray;
 }
+.box {
+    border: 3px solid rgb(32, 130, 211);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+}
     /* Parallax Backgrounds */
 .parallax-1,
 .parallax-2,
@@ -102,17 +106,14 @@ a:hover {
 
 nav {
     display: block;
-    /* flex-direction: column; */
     position: fixed;
     top: 0;
     left: -260px;
     width: 250px;
-    height: 60%;
+    height: fit-content;
     padding: 0px;
     margin: 10px;
     background-color: rgb(143,191,233);
-    border: 2px solid rgb(32, 130, 211);
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
     z-index: 101;
     transition: all 0.3s ease-in-out;
     overflow: hidden;
@@ -120,11 +121,12 @@ nav {
 nav a {
     display: flex;
     align-items: center;
-    justify-content: center;
-    height: 67px;
+    justify-content: left;
+    height: 50px;
     width: 100%;
     margin: 0;
     margin-bottom: 15px;
+    padding-left: 25px;
     font-size: 1.2rem;
     font-weight: 600;
     text-decoration: none;
@@ -151,8 +153,8 @@ nav a:hover {
     border-radius: 50%;
     z-index: 100;
     cursor: pointer;
-    box-shadow: 4px 4px 4px rgba(0,0,0,0.1);
-    transition: all 0.5s ease-in-out 250ms;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.5s ease-in-out 250ms;
 }
 .nav-close-btn {
     display: block;
@@ -168,7 +170,7 @@ nav a:hover {
     cursor: pointer;
 }
 .nav-filler {
-    height: 100%;
+    height: 50px;
     background-color: rgb(32, 130, 211);
     border-top: 2px solid white;
 }
@@ -177,8 +179,15 @@ nav a:hover {
     nav {
         left: -210px;
         width: 200px;
-        height: 60%;
+        height: fit-content;
         margin: 5px;
+    }
+    nav a {
+        height: 30px;
+        margin-bottom: 10px;
+    }
+    .nav-filler {
+        height: 25px;
     }
     .nav-open-btn {
         top: 5px;
@@ -191,12 +200,12 @@ nav a:hover {
     .nav-close-btn {
         top: 5px;
         left: 5px;
-        width: 60px;
-        height: 60px;
-        margin: 10px;
+        width: 45px;
+        height: 45px;
+        margin: 5px;
         margin-left: auto;
-        padding: 10px;
-        font-size: 40px;
+        padding: 5px;
+        font-size: 35px;
         border-radius: 50%;
         border: none;
     }
@@ -204,7 +213,7 @@ nav a:hover {
 
 /*  --- BANNER --- */
 
-.who-is-guy {
+.banner {
     display: grid;
     grid-template-areas: 
                 "text-1 image"                     
@@ -212,19 +221,18 @@ nav a:hover {
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 2fr 1fr;
     grid-column-gap: 20px;
-    background-color: white;
-    max-width: 100%;
-    width: 100%;
-    height: 500px;
     align-items: center;
     justify-items: stretch;
     justify-content: center;
-    box-shadow: 0 4px 2px -2px gray;
-    border-bottom: 5px solid rgb(32, 130, 211);
-    margin-top: -20;
+    max-width: 100%;
+    width: 100%;
+    height: 500px;
     padding: 10px 20px; 
+    background-color: white;
+    box-shadow: 0 4px 4px -2px gray;
+    border-bottom: 5px solid rgb(32, 130, 211);
 }
-.who-is-guy::before {
+.banner::before {
     content: " ";
     position: absolute;
     top: 0;
@@ -248,7 +256,7 @@ nav a:hover {
     border-radius: 50%;
     filter: grayscale(75%);
 }
-.who-is-guy h1 {
+.banner h1 {
     text-align: center;
     color: white;
     font-size: 2rem;
@@ -265,7 +273,7 @@ nav a:hover {
     width: 100%;
     height: 50%;
     border-bottom: 1px dashed white;
-    box-shadow: 0 1px 1px -1px rgb(128, 128, 128);
+    box-shadow: 0 1px 1px -1px rgba(0, 0, 0, 0.1);
     z-index: 99;
 }
 .banner-text-2 {
@@ -287,7 +295,8 @@ nav a:hover {
     text-align: center;
     margin-bottom: 0px;
 }
-.banner-text-2 li {
+.banner-text-2 li,
+.banner-text-2 p {
     display: inline-block;
     font-size: 1.2rem;
     color: white;
@@ -296,7 +305,7 @@ nav a:hover {
 }
 
 @media only screen and (max-width: 768px) {
-    .who-is-guy {
+    .banner {
         grid-template-areas: 
                     "image"
                     "text-1"
@@ -306,7 +315,7 @@ nav a:hover {
         grid-column-gap: 0;
         height: 550px;
     }
-    .who-is-guy::before {
+    .banner::before {
         height: 550px;
     }
     .guy-img-container{
@@ -319,7 +328,7 @@ nav a:hover {
         align-self: center;
         margin: 0 auto;
     }
-    .who-is-guy h1 {
+    .banner h1 {
         margin-top: -65px;
         margin-bottom: 15px;
     }
@@ -329,9 +338,20 @@ nav a:hover {
     .banner-text-2 ul {
         display: block;
     }
-    .banner-text-2 li {
+    .banner-text-2 li,
+    .banner-text-2 p {
         margin-top: 0;
         padding: 5px;
+    }
+}
+
+@media only screen and (min-width: 1058px) {
+    .banner h1 {
+        font-size: 2.5rem;
+    }
+    .banner-text-2 li,
+    .banner-text-2 p {
+        font-size: 1.5rem;
     }
 }
 
@@ -346,7 +366,7 @@ nav a:hover {
     padding-top: 0px;
     color: white;
     background-color: rgba(32, 130, 211, 0.5);
-    box-shadow: 0 4px 2px -2px gray;
+    box-shadow: 0 4px 4px -2px gray;
     border-top: 5px solid rgb(32, 130, 211);
     border-bottom: 5px solid rgb(32, 130, 211);
 }
@@ -369,15 +389,141 @@ nav a:hover {
 @media only screen and (max-width: 768px) {
     .blurb {
         width: 100%;
-        height: 375px;
+        height: fit-content;
+        padding: 10px;
     }
     .blurb h2 {
+        font-size: 1.75rem;
         letter-spacing: normal;
     }
 }
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1058px) {
     .blurb p {
         width: 40%;
         font-size: 1.1rem;
+    }
+}
+
+/* --- SKILLS PAGE --- */
+
+
+/* --- BANNER --- */
+.skills.banner {
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    margin-bottom: 25px;
+    padding: 0px;
+    background-color: rgb(143,191,233);
+    border-top: none;
+}
+.skills.banner::before {
+    display: none;
+}
+.skills .banner-text-1 {
+    width: 65%;
+    margin: 0 auto;
+    text-align: center;
+}   
+.skills .banner-text-2 {
+    width: 65%;
+    margin: 0 auto;
+    color: white;
+    padding-top: 0;
+    text-align: center;
+}
+
+@media only screen and (max-width:768px) {
+    .skills.banner h1 {
+        margin-top: 30px;
+        letter-spacing: normal;
+    }
+}
+
+/* SKILLS LIST */
+
+#skills {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 25px;
+    /* padding-bottom: 50px; */
+    width: 100%;
+    background-color: rgb(143,191,233);
+    border-top: 5px solid rgb(32, 130, 211);
+}
+.category-select-container {
+    display: block;
+    width: 85%;
+    margin-bottom: 15px;
+}
+.skill-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 20%;
+    margin: 10px;
+    padding: 25px;
+    background-color: aliceblue;
+    transition: all 0.3s ease-in-out;
+}
+.skill-container:hover {
+    margin-top: -15px;
+    margin-bottom: 15px;
+    box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.2);
+}
+.skill-container:hover .icon {
+    opacity: 1;
+}
+.icon {
+    width: auto;
+    height: 100px;
+    max-width: 100%;
+    opacity: 0.75;
+    transition: opacity 0.3s ease-in-out;
+}
+.updating,
+.favorite {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 40px;
+    margin: 0;
+    text-align: center;
+    font-weight: bold;
+    color:white;
+    /* border-top: 3px solid rgb(32, 130, 211); */
+    background-color: rgba(32, 130, 211, 0.5);
+}
+
+@media only screen and (max-width: 768px) {
+    #skills {
+        padding: 10px;
+    }
+    .category-select-container {
+        width: 92%;
+    }
+    .skill-container {
+        width: 30%;
+        margin: 5px;
+        padding: 15px 0;
+    }
+    .skill-container:hover {
+        margin: 5px;
+    }
+    .icon {
+        /* max-width: 75px; */
+        opacity: 1;
+    }
+    .updating,
+    .favorite {
+        font-size: 0.6rem;
+        height: 23px;
+        color: rgba(255 255 255 / 0.7)
     }
 }

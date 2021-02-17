@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Guy Lorshbaugh | Technologies</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+        <script src="resources/script/skills.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600&family=Newsreader:wght@300;400;600&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="nav-open-btn material-icons" onclick="openNav()">menu</div>
+            <nav id="nav" class="box">
+                <div class="nav-close-btn material-icons" onclick="closeNav()">menu_open</div>
+                <a class="serif" href="index.html"><span class="material-icons">face &nbsp;</span>About</a>
+                <a class="serif" href="#"><span class="material-icons">build_circle &nbsp;</span>Technologies</a>
+                <a class="serif" href="#"><span class="material-icons">build_circle &nbsp;</span>Projects</a>
+                <!-- <a class="serif" href="#"><span class="material-icons">account_circle &nbsp;</span>Clients</a> -->
+                <a class="serif" href="#"><span class="material-icons">3p &nbsp;</span>Contact</a>
+                <div class="nav-filler"> </div>
+            </nav>
+            <script src="resources/script/side-nav.js"></script>
+        </header>
+        <main>
+            <article class="skills banner">
+                <div  class="banner-text-1 serif">
+                    <h1>Technologies and Skills</h1>
+                </div>
+                <div class="banner-text-2 serif">
+                    <p>Here are some of the platforms in which I am proudly proficient.</p> 
+                </div>
+            </article>
+            <article id="skills">
+                <div class="category-select-container">
+                    <select class="category-select" name='categorySelect' onchange='this.form.submit()'>
+                        <option value='0'>Contact List</option>
+                        <option value='1'>blah</option>
+                        <option value='2'>blah2</option>
+                        <option value='3'>blah3</option>
+                    </select>
+                </div>
+                <script id="write-skills">writeSkills("null", all=true)</script>
+            </article>
+        </main>
+    </body>
+</html>
