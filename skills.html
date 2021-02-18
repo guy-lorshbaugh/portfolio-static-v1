@@ -10,7 +10,7 @@
     </head>
     <body>
         <header>
-            <div class="nav-open-btn material-icons" onclick="openNav()">menu</div>
+            <div class="nav-open-btn material-icons" onclick="openNav()" role="button">menu</div>
             <nav id="nav" class="box">
                 <div class="nav-close-btn material-icons" onclick="closeNav()">menu_open</div>
                 <a class="serif" href="index.html"><span class="material-icons">face &nbsp;</span>About</a>
@@ -32,14 +32,22 @@
                 </div>
             </article>
             <article id="skills">
-                <!-- <div class="category-select-container">
-                    <select class="category-select" name='categorySelect' onchange='this.form.submit()'>
-                        <option value='0'>Contact List</option>
-                        <option value='1'>blah</option>
-                        <option value='2'>blah2</option>
-                        <option value='3'>blah3</option>
-                    </select>
-                </div> -->
+                <div class="category-select-container sans-serif">
+                    <div id="filter-btn" onclick="openMenu()" role="button">
+                        <span class="material-icons">filter_list &nbsp;</span>FILTER
+                    </div>
+                    <ul id="filter-box" style="height:0px;">
+                        <li id="menu-a11y">Accessibility</li>
+                        <li id="menu-data">Database</li>
+                        <li id="menu-frame">Frameworks</li>
+                        <li id="menu-lang">Languages</li>
+                        <li id="menu-media">Media</li>
+                        <li id="menu-serv">Services</li>
+                        <li id="menu-soft">Software</li>
+                        <li id="menu-tools" class="last-menu-item">Tools</li>                        
+                    </ul>
+                    <script src="resources/script/filter-box.js"></script>
+                </div>
                 <script id="write-skills">writeSkills("null", all=true)</script>
             </article>
         </main>
