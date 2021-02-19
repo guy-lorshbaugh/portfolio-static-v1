@@ -311,7 +311,7 @@ const favoriteItem = (object) => {
 
 function writeItem(item) {
     document.write(`
-    <div class="skill-container box">
+    <div class="skill-container box ${item.category.length > 1 ? item.category.join(' ') : item.category}">
             <a href="${item.url}" target="_blank">
                 <img class="icon" src="${item.img}" alt="${item.name} Vector Logo">
             </a>
@@ -323,8 +323,8 @@ function writeItem(item) {
 const writeSkills = (category, all=false) => {
     for (var i=0; i < skills.length; i++) {
         const item = skills[i]
-            if (item.category.includes(category)) {
-                writeItem(item);
+        if (item.category.includes(category)) {
+            writeItem(item);
             }
         else if (all) {
             writeItem(item);
