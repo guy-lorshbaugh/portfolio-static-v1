@@ -41,15 +41,23 @@ const skills = [
     },
     {
         "name": "DevTools",
-        "category": [ "tool" ],
+        "category": [ "tools" ],
         "learned": true,
         "favorite": true,
         "url": "https://developers.google.com/web/tools/chrome-devtools",
         "img": "resources/img/svg/devtools.svg"
     },
     {
+        "name": "Discord",
+        "category": [ "software" ],
+        "learned": true,
+        "favorite": false,
+        "url": "https://discord.com/",
+        "img": "resources/img/svg/discord.svg"
+    },
+    {
         "name": "Django",
-        "category": [ "framework" ],
+        "category": [ "frameworks" ],
         "learned": true,
         "favorite": true,
         "url": "https://www.djangoproject.com/",
@@ -65,7 +73,7 @@ const skills = [
     },
     {
         "name": "Flask",
-        "category": "framework",
+        "category": [ "frameworks" ],
         "learned": true,
         "favorite": false,
         "url": "https://flask.palletsprojects.com/en/1.1.x/",
@@ -249,7 +257,7 @@ const skills = [
     },
     {
         "name": "React JS",
-        "category": [ "tools" ],
+        "category": [ "frameworks, tools" ],
         "learned": false,
         "favorite": false,
         "url": "https://www.reactjs.org/",
@@ -265,7 +273,7 @@ const skills = [
     },
     {
         "name": "SQLite",
-        "category": [ "tools", "software", "database" ],
+        "category": [ "tools", "database" ],
         "learned": true,
         "favorite": false,
         "url": "https://www.sqlite.org/",

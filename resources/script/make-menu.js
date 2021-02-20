@@ -1,3 +1,40 @@
+const a11y = document.querySelector(".accessibility");
+const database = document.querySelector(".database");
+const frameworks = document.querySelector(".frameworks");
+const languages = document.querySelector(".language");
+const media = document.querySelector(".media");
+const services = document.querySelector(".services");
+const software = document.querySelector(".software");
+const tools = document.querySelector(".tools");
+
+
+// document.getElementById("menu-all").onclick(
+//     document.getElementById("write-skills").innerHTML = 'writeSkills("null", all=true)'
+//     )
+
+a11y.addEventListener('mousedown', function() {
+    a11y.style.display = "block"
+    database.style.display = "none !important";
+    frameworks.style.display = "none !important";
+    languages.style.display = "none !important";
+    media.style.display = "none !important";
+    services.style.display = "none !important";
+    software.style.display = "none !important";
+    tools.style.display = "none !important";
+}
+)
+// document.getElementById("menu-a11y").onclick(
+//     a11y.style.display = "none !important")
+    // database.style.display = "none !important";
+    // frameworks.style.display = "none !important";
+    // languages.style.display = "none !important";
+    // media.style.display = "none !important";
+    // services.style.display = "none !important";
+    // software.style.display = "none !important";
+    // tools.style.display = "none !important";
+    // )
+
+
 // writeMenu would write the menu from objects in the menuItems array
 //  
 // const menuItems = [
@@ -66,13 +103,3 @@
 // }
 
 // writeMenu()
-
-
-
-document.getElementById("menu-all").onclick(
-    document.getElementById("write-skills").innerHTML = 'writeSkills("null", all=true)'
-    )
-document.getElementById("menu-a11y").onclick(
-    document.getElementById("write-skills").innerHTML = 'writeSkills("accessibility")'
-    )
-        

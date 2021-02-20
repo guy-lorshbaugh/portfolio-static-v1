@@ -4,7 +4,7 @@
         <title>Guy Lorshbaugh | Technologies</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="resources/css/style.css">
-        <script src="resources/script/skills.js"></script>
+        <script src="resources/script/write-skills.js"></script>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600&family=Newsreader:wght@300;400;600&display=swap" rel="stylesheet">
     </head>
@@ -23,6 +23,8 @@
             <script src="resources/script/side-nav.js"></script>
         </header>
         <main>
+            <div tabindex="0" onclick="topFunction()" id="top-button" class="material-icons" title="Go to top">keyboard_arrow_up</div>
+            <script src="resources/script/scroll-btn.js"></script>
             <article class="skills banner">
                 <div  class="banner-text-1 serif">
                     <h1>Technologies and Skills</h1>
@@ -31,26 +33,29 @@
                     <p>Here are some of the platforms in which I am proudly proficient.</p> 
                 </div>
             </article>
-            <article id="skills">
+            <article id="skills" style>
                 <div class="category-select-container sans-serif">
                     <div id="filter-btn" onclick="openMenu()" role="button">
                         <span class="material-icons">filter_list &nbsp;</span>FILTER
                     </div>
                     <ul id="filter-box" style="height:0px;">
-                        <li id ="menu-all">ALL</li>
-                        <li id="menu-a11y">Accessibility</li>
-                        <li id="menu-data">Database</li>
-                        <li id="menu-frame">Frameworks</li>
-                        <li id="menu-lang">Languages</li>
-                        <li id="menu-media">Media</li>
-                        <li id="menu-serv">Services</li>
-                        <li id="menu-soft">Software</li>
-                        <li id="menu-tools" class="last-menu-item">Tools</li>                        
+                        <div class="list-header">
+                            <span class="material-icons">filter_list &nbsp;</span>FILTER
+                        </div>
+                        <li class="filter-item active" onclick="filterSelection('all')">ALL</li>
+                        <li class="filter-item" onclick="filterSelection('accessibility')">Accessibility</li>
+                        <li class="filter-item" onclick="filterSelection('database')">Database</li>
+                        <li class="filter-item" onclick="filterSelection('frameworks')">Frameworks</li>
+                        <li class="filter-item" onclick="filterSelection('language')">Languages</li>
+                        <li class="filter-item" onclick="filterSelection('media')">Media</li>
+                        <li class="filter-item" onclick="filterSelection('services')">Services</li>
+                        <li class="filter-item" onclick="filterSelection('software')">Software</li>
+                        <li class="filter-item last-menu-item" onclick="filterSelection('tools')">Tools</li>                        
                     </ul>
                     <script src="resources/script/slide-down-menu.js"></script>
-                    <script src="resources/script/make-menu.js"></script>
                 </div>
                 <script id="write-skills">writeSkills("null", all=true)</script>
+                <script src="resources/script/filter-menu.js"></script>
             </article>
         </main>
     </body>
