@@ -211,8 +211,8 @@ nav a:hover {
 
 @media only screen and (max-width: 768px) {
     nav {
-        left: -210px;
-        width: 200px;
+        left: -260px;
+        width: 250px;
         height: fit-content;
         margin: 5px;
     }
