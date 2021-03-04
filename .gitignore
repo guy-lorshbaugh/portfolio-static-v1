@@ -1,7 +1,7 @@
 resources/img/hi-res
 resources/script/models.py
 resources/script/icon-opacity.js
-resources/script/skills.json
+resources/script/skills.js
 resources/data
 resources/img/.DS_Store
 resources/.DS_Store

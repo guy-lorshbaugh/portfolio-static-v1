@@ -17,7 +17,7 @@ document.addEventListener('mousedown', function(event){
 if(filterBox.style.height === "355px"){
     if (!filterBox.contains(event.target) || 
     filterBox.contains(event.target)) {
-        openMenu();[]
+        openMenu();
     }
     if (filterButton.contains(event.target)) {
         openMenu();

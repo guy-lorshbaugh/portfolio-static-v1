@@ -1,4 +1,7 @@
 var navMenu = document.getElementById('nav')
+var comingSoon = document.getElementsByClassName('coming-soon');
+
+console.log(comingSoon)
 
 function openNav() {
   navMenu.style.left = "0px";
@@ -17,3 +20,16 @@ document.addEventListener('mousedown', function(event){
           }
   }
 })
+
+for (i=0; i<comingSoon.length; i++) {
+  let item = comingSoon[i];
+  let defaultText = item.innerHTML;
+  console.log(defaultText);
+  let icon = document.querySelectorAll('a.coming-soon.serif span.material-icons');
+  item.addEventListener('mouseover', function(event){
+    item.innerHTML=`<span class="material-icons">lock &nbsp</span> Coming Soon!`;
+  })
+  item.addEventListener('mouseout', function(event){
+    item.innerHTML = defaultText;
+  })
+}

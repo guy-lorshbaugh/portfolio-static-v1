@@ -2,11 +2,19 @@
 <html lang="en-US">
     <head>
         <title>Guy Lorshbaugh | Technologies</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
         <link rel="stylesheet" type="text/css" href="resources/css/style.css">
-        <script src="resources/script/write-skills.js"></script>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600&family=Newsreader:wght@300;400;600&display=swap" rel="stylesheet">
+        <meta name="msapplication-TileColor" content="#2d89ef">
+        <meta name="theme-color" content="#ffffff">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="resources/script/skills.js"></script>
+        <script src="resources/script/write-skills.js"></script>
     </head>
     <body>
         <header>
@@ -15,9 +23,9 @@
                 <div class="nav-close-btn material-icons" onclick="closeNav()">menu_open</div>
                 <a class="serif" href="index.html"><span class="material-icons">face &nbsp;</span>About</a>
                 <a class="serif" href="#"><span class="material-icons">build_circle &nbsp;</span>Technologies</a>
-                <a class="serif" href="#"><span class="material-icons">build_circle &nbsp;</span>Projects</a>
+                <a class="coming-soon serif" href="#"><span class="material-icons">square_foot &nbsp;</span>Projects</a>
                 <!-- <a class="serif" href="#"><span class="material-icons">account_circle &nbsp;</span>Clients</a> -->
-                <a class="serif" href="#"><span class="material-icons">3p &nbsp;</span>Contact</a>
+                <a class="serif" href="index.html#contact"><span class="material-icons">3p &nbsp;</span>Contact</a>
                 <div class="nav-filler"> </div>
             </nav>
             <script src="resources/script/side-nav.js"></script>
@@ -54,7 +62,7 @@
                     </ul>
                     <script src="resources/script/slide-down-menu.js"></script>
                 </div>
-                <script id="write-skills">writeSkills("null", all=true)</script>
+                <script id="write-skills">writeSkills(skills, "null", all=true)</script>
                 <script src="resources/script/filter-menu.js"></script>
             </article>
         </main>

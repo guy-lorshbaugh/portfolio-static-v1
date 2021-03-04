@@ -29,6 +29,16 @@
 * {
     box-sizing: border-box;
 }
+*:focus { 
+    outline: 0 !important;
+    box-shadow:
+    0 0 0 .2rem #fff,
+    0 0 0 .35rem #069 !important;
+}
+*:focus:not(.focus-visible) {
+    outline: 0 !important;
+    box-shadow: none !important;
+}
 html {
     font-family: sans-serif;
     scroll-behavior: smooth
@@ -269,8 +279,7 @@ nav a:hover {
     bottom: 0;
     right: 0;
     height: 500px;
-    background-color: rgb(32, 130, 211);
-    opacity: 0.5;
+    background-color: rgba(32, 130, 211, 0.5);
     z-index: 98;
 }
 .guy-img-container {
@@ -493,9 +502,15 @@ nav a:hover {
     padding: 5px;
     background-color: rgb(143,191,233);
     border: 3px solid rgb(32, 130, 211);
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    transition: box-shadow 50ms ease-in-out;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+#filter-btn:hover {
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
 }
 #filter-box {
     display: flex;
