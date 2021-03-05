@@ -1,3 +1,36 @@
+const skillsUrl = "https://guy-lorshbaugh.github.io/portfolio-static-v1/resources/script/skills.json"
+
+function getData() {
+    fetch(skillsUrl, {method: "GET", "Content-type":"json"})
+    .then(response => {
+        if (response.ok) {
+            return response.json(); 
+        }
+    }, 
+        networkError => {
+          console.log(networkError.message);
+        }
+    )
+    .then(jsonResponse => {
+        writeSkills(jsonResponse);
+        }
+    );
+}
+
+function writeItem(item) {
+    const contents = document.getElementById("skills");
+    let div = document.createElement("div");
+    div.className = `skill-container box ${item.category.length > 1 ? item.category.join(' ') : item.category}`;
+    div.innerHTML = `
+            <a href="${item.url}" target="_blank">
+            <img class="icon" src="${item.img}" alt="${item.name} Vector Logo">
+            </a>
+            ${learnedItem(item)}
+    `;
+    contents.appendChild(div);
+    
+}
+
 const learnedItem = (object) => {
     var learned;
     if (object.learned === true) {
@@ -16,17 +49,6 @@ const favoriteItem = (object) => {
         favorite = "";
     }
     return favorite;
-}
-
-function writeItem(item) {
-    document.write(`
-    <div class="skill-container box ${item.category.length > 1 ? item.category.join(' ') : item.category}">
-            <a href="${item.url}" target="_blank">
-                <img class="icon" src="${item.img}" alt="${item.name} Vector Logo">
-            </a>
-            ${learnedItem(item)}
-    </div>
-    `);    
 }
 
 const writeSkills = (array, category, all=false) => {
